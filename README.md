@@ -101,7 +101,7 @@ Docker uses a client-server architecture.
     * The mnt namespace: Managing filesystem mount points (MNT: Mount).
     * The uts namespace: Isolating kernel and version identifiers. (UTS: Unix Timesharing System).
 
-![](namespace.png)
+![](images/namespace.png)
 
 * union filesystem
 
