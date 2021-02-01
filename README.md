@@ -2,7 +2,7 @@
 ===============================
 
 
-##### 1. what's docker
+#### 1. what's docker
 ---------------
 
 * Offical: Docker is an open platform for developping, shipping, and running(distributed) applications
@@ -15,7 +15,7 @@
 * Using namespace `isolation` and cgroups `resorce contorl`
 * Build once, Run anywhere
 
-##### 2. Docker engine
+#### 2. Docker engine
 ---------------
 
 Docker Engine is a client-server application with these major components:
@@ -39,7 +39,7 @@ What can I use Docker for？
 2. Responsive deployment and scaling
 3. Running more workloads on the same hardware
 
-##### 3. Architecture
+#### 3. Architecture
 ---------------
 
 Docker uses a client-server architecture.
@@ -64,12 +64,12 @@ Docker uses a client-server architecture.
 * 3.5 **Docker Conatiners**
     > A container is a runnable instance of an image. You can create, start, stop, move, or delete a container using the Docker API or CLI.
 
-##### 4. Docker vs VM
+#### 4. Docker vs VM
 ---------------
 
 ![](images/dockervsvm.jpg)
 
-##### 5. The underlying technology
+#### 5. The underlying technology
 ---------------
 
 ![](images/libcontainer.jpg)
@@ -99,7 +99,7 @@ Docker uses a client-server architecture.
     * The mnt namespace: Managing filesystem mount points (MNT: Mount).
     * The uts namespace: Isolating kernel and version identifiers. (UTS: Unix Timesharing System).
 
-* union filesystem
+* Union filesystem
 
     > Union file systems, or UnionFS, are file systems that operate by creating layers, making them very lightweight and fast.
 
