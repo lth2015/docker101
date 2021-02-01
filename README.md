@@ -85,9 +85,10 @@ Docker uses a client-server architecture.
     * Classify network packets
     * Freeze process
 
-![](images/cgroups.jpg)
 
 ![](images/cgroups.png)
+
+![](images/cgroups.jpg)
 
 * namespaces
     > Docker uses a technology called namespaces to provide the isolated workspace called the container. When you run a container, Docker creates a set of namespaces for that container. These namespaces provide a layer of isolation.
@@ -100,8 +101,8 @@ Docker uses a client-server architecture.
     * The mnt namespace: Managing filesystem mount points (MNT: Mount).
     * The uts namespace: Isolating kernel and version identifiers. (UTS: Unix Timesharing System).
 
-* Union filesystem
+* union filesystem
 
     > Union file systems, or UnionFS, are file systems that operate by creating layers, making them very lightweight and fast.
 
-![](unionfs.png)
+![](images/unionfs.png)
