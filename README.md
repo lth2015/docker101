@@ -61,15 +61,44 @@ Docker uses a client-server architecture.
 * 3.5 **Docker Conatiners**
     A container is a runnable instance of an image. You can create, start, stop, move, or delete a container using the Docker API or CLI.
 
-##### 4. The underlying technology
+##### 4. Docker vs VM
 ---------------
 
-* control groups
+![](dockervsvm.jpg)
+
+##### 5. The underlying technology
+---------------
+
+![](kernel.png)
+
+* cgroups
+    * control groups
+    * Resource accounting(with hierarchy)
+    * Much more sophisticated than `ulimit`
+    * A filesystem
+    * Limit and prioritize 
+    * Classify network packets
+    * Freeze process
+
+    ![](cgroups.jpg)
+    ![](cgroups.png)
 
 * namespaces
+    Docker uses a technology called namespaces to provide the isolated workspace called the container. When you run a container, Docker creates a set of namespaces for that container. These namespaces provide a layer of isolation.
+
+    Docker Engine uses namespaces such as the following on Linux:
+
+    * The pid namespace: Process isolation (PID: Process ID).
+    * The net namespace: Managing network interfaces (NET: Networking).
+    * The ipc namespace: Managing access to IPC resources (IPC: InterProcess Communication).
+    * The mnt namespace: Managing filesystem mount points (MNT: Mount).
+    * The uts namespace: Isolating kernel and version identifiers. (UTS: Unix Timesharing System).
 
 * union filesystem
 
+Union file systems, or UnionFS, are file systems that operate by creating layers, making them very lightweight and fast. Docker Engine uses UnionFS to provide the building blocks for containers. Docker Engine can use multiple UnionFS variants, including AUFS, btrfs, vfs, and DeviceMapper.
+
 * container format
+
 
 
