@@ -101,6 +101,8 @@ Docker uses a client-server architecture.
     * The mnt namespace: Managing filesystem mount points (MNT: Mount).
     * The uts namespace: Isolating kernel and version identifiers. (UTS: Unix Timesharing System).
 
+![](namespace.png)
+
 * union filesystem
 
     > Union file systems, or UnionFS, are file systems that operate by creating layers, making them very lightweight and fast.
