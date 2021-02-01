@@ -44,12 +44,32 @@ What can I use Docker for？
 
 Docker uses a client-server architecture.
 
-![](architecture.png)
+![](images/architecture.png)
 
 * 3.1 **The Docker Daemon**
+    The Docker daemon (dockerd) listens for Docker API requests and manages Docker objects such as images, containers, networks, and volumes.
+
 * 3.2 **The Docker Client**
+    The Docker client (docker) is the primary way that many Docker users interact with Docker.
+
 * 3.3 **The Docker registries**
+    A Docker registry stores Docker images. Docker Hub is a public registry that anyone can use, and Docker is configured to look for images on Docker Hub by default. You can even run your own private registry.
+
 * 3.4 **Docker Images**
+    An image is a read-only template with instructions for creating a Docker container.
+
 * 3.5 **Docker Conatiners**
+    A container is a runnable instance of an image. You can create, start, stop, move, or delete a container using the Docker API or CLI.
+
+##### 4. The underlying technology
+---------------
+
+* control groups
+
+* namespaces
+
+* union filesystem
+
+* container format
 
 
