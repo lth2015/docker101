@@ -86,6 +86,7 @@ Docker uses a client-server architecture.
     * Freeze process
 
 ![](images/cgroups.jpg)
+
 ![](images/cgroups.png)
 
 * namespaces
