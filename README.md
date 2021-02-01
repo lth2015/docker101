@@ -47,29 +47,34 @@ Docker uses a client-server architecture.
 ![](images/architecture.png)
 
 * 3.1 **The Docker Daemon**
-    The Docker daemon (dockerd) listens for Docker API requests and manages Docker objects such as images, containers, networks, and volumes.
+
+    > The Docker daemon (dockerd) listens for Docker API requests and manages Docker objects such as images, containers, networks, and volumes.
 
 * 3.2 **The Docker Client**
-    The Docker client (docker) is the primary way that many Docker users interact with Docker.
+
+    > The Docker client (docker) is the primary way that many Docker users interact with Docker.
 
 * 3.3 **The Docker registries**
-    A Docker registry stores Docker images. Docker Hub is a public registry that anyone can use, and Docker is configured to look for images on Docker Hub by default. You can even run your own private registry.
+
+    > A Docker registry stores Docker images. Docker Hub is a public registry that anyone can use, and Docker is configured to look for images on Docker Hub by default. You can even run your own private registry.
 
 * 3.4 **Docker Images**
-    An image is a read-only template with instructions for creating a Docker container.
+    > An image is a read-only template with instructions for creating a Docker container.
 
 * 3.5 **Docker Conatiners**
-    A container is a runnable instance of an image. You can create, start, stop, move, or delete a container using the Docker API or CLI.
+    > A container is a runnable instance of an image. You can create, start, stop, move, or delete a container using the Docker API or CLI.
 
 ##### 4. Docker vs VM
 ---------------
 
-![](dockervsvm.jpg)
+![](images/dockervsvm.jpg)
 
 ##### 5. The underlying technology
 ---------------
 
-![](kernel.png)
+![](images/libcontainer.jpg)
+
+![](images/kernel.png)
 
 * cgroups
     * control groups
@@ -80,11 +85,11 @@ Docker uses a client-server architecture.
     * Classify network packets
     * Freeze process
 
-    ![](cgroups.jpg)
-    ![](cgroups.png)
+![](images/cgroups.jpg)
+![](images/cgroups.png)
 
 * namespaces
-    Docker uses a technology called namespaces to provide the isolated workspace called the container. When you run a container, Docker creates a set of namespaces for that container. These namespaces provide a layer of isolation.
+    > Docker uses a technology called namespaces to provide the isolated workspace called the container. When you run a container, Docker creates a set of namespaces for that container. These namespaces provide a layer of isolation.
 
     Docker Engine uses namespaces such as the following on Linux:
 
@@ -96,9 +101,6 @@ Docker uses a client-server architecture.
 
 * union filesystem
 
-Union file systems, or UnionFS, are file systems that operate by creating layers, making them very lightweight and fast. Docker Engine uses UnionFS to provide the building blocks for containers. Docker Engine can use multiple UnionFS variants, including AUFS, btrfs, vfs, and DeviceMapper.
+    > Union file systems, or UnionFS, are file systems that operate by creating layers, making them very lightweight and fast.
 
-* container format
-
-
-
+![](unionfs.png)
