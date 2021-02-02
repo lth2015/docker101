@@ -213,7 +213,12 @@ docker build -t helloworld .
 * WORKDIR: sets the working directory for any RUN, CMD, ENTRYPOINT, COPY and ADD commands during build. eg: `WORKDIR /opt`
 * ENDPOINT: is the other instruction used to configure how the container will run. Just like with CMD, you need to specify a command and parameters. eg: `ENTRYPOINT [“echo”, “Hello World”]`
 
-### 9. Docker commands
+### 9. Docker commands flow
 ------------------
 
 ![](images/flow.png)
+
+### 10. Docker cheat sheet
+------------------
+
+![](images/cheatsheet.png)
