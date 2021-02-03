@@ -16,7 +16,7 @@ jobs:
     steps:
       - name: Check out code
         uses: actions/checkout@v2
-      - name: Get release version
+      - name: set build time
         id: set build time
         run: echo ::set-env name=BUILD_TIME::$(echo ${`date "+%Y%m%d%H%M%S"`})
       - name: Get release version
