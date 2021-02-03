@@ -12,6 +12,7 @@ jobs:
     runs-on: ubuntu-latest 
     env:
       ACTIONS_ALLOW_UNSECURE_COMMANDS: true
+      BUILD_TIME: echo $(date "+%Y%m%d%H%M%S")
     steps:
       - name: Check out code
         uses: actions/checkout@v2
@@ -26,4 +27,4 @@ jobs:
           dockerfile: php/Dockerfile
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_PASSWORD }}
-          tags: "latest,${{ env.RELEASE_VERSION }}"
+          tags: "latest,${{ env.RELEASE_VERSION }}-${{ env.BUILD_TIME }}"
