@@ -6,47 +6,6 @@ on: push
 
 # What to do  when a 'push' event triggered
 jobs:
-  # lint:
-  #   name: Lint
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - name: Set up Php
-  #       uses: actions/setup-go@v2
-  #       with:
-  #         go-version: 1.13
-
-  #     - name: Check out code
-  #       uses: actions/checkout@v2
-  #     # - name: Granting private modules access
-  #       # run: |
-  #         # git config --global url."https://${{ secrets.PROJECT_KEY }}:x-oauth-basic@github.com/imyuliz/project".insteadOf "https://github.com/imyuliz/project"
-  #     - name: Lint Go Code
-  #       run: |
-  #         export PATH=$PATH:$(go env GOPATH)/bin # temporary fix. See https://github.com/actions/setup-go/issues/14
-  #         go get -u golang.org/x/lint/golint 
-  #         make lint
-
-  # test:
-  #   name: Test
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - name: Set up Go
-  #       uses: actions/setup-go@v2
-  #       with:
-  #         go-version: 1.13
-
-  #     - name: Check out code
-  #       uses: actions/checkout@v2
-
-  #     - name: Run Unit tests.
-  #       run: make test-coverage
-
-  #     - name: Upload Coverage report to CodeCov
-  #       uses: codecov/codecov-action@v1.0.14
-  #       with:
-  #         token: ${{secrets.CODECOV_TOKEN}}
-  #         file: ./coverage.txt
-
 
   build:
     name: Build
@@ -55,7 +14,7 @@ jobs:
       - name: Check out code
         uses: actions/checkout@v2
       - name: Build and push image to dockerhub
-        uses: imyuliz/Publish-Docker-Github-Action@master
+        uses: lth2015/Publish-Docker-Github-Action@master
         with:
           name: ${{ secrets.IMAGE_NAME }}
           # docker build -t template-go -f build/docker/Dockerfile .
